@@ -40,3 +40,86 @@
 .read-the-docs {
   color: #888;
 }
+
+/* New colorful / classical styles for the Fun Fact card */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #fffaf0 0%, #f3f7ff 100%);
+  color: #222;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.site-header .title {
+  font-size: 2.25rem;
+  letter-spacing: 0.06em;
+  color: #2b2b6b;
+  margin: 0 0 1.25rem 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.fact-card {
+  width: min(680px, 96%);
+  background: radial-gradient(1200px 200px at 10% 10%, rgba(255,240,230,0.6), transparent 20%),
+              linear-gradient(135deg, #fff 0%, #fcf8ff 100%);
+  border: 1px solid rgba(43,43,107,0.08);
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(43,43,107,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+  margin-bottom: 1rem;
+}
+
+.fact-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #2b2b2b;
+  margin: 0 0 0.75rem 0;
+}
+
+.fact-source {
+  margin: 0.25rem 0 0.5rem 0;
+  color: #444;
+}
+
+.source-link {
+  color: #7b3fe4;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(90deg,#ffd6a5 0%,#fbc2eb 50%,#c7f9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.source-link:hover{
+  text-decoration: underline;
+}
+
+.fact-meta {
+  margin-top: 0.5rem;
+  color: #666;
+}
+.meta-id, .meta-lang { font-variant: small-caps; color:#3b3b6b }
+
+.controls { margin-top: 0.5rem }
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg,#7b3fe4 0%, #ff7ab6 50%, #ffd36b 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(123,63,228,0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.btn:disabled{ opacity: .6; cursor: wait }
+.btn:not(:disabled):hover{ transform: translateY(-3px); box-shadow: 0 10px 30px rgba(123,63,228,0.22) }
+
+@media (max-width: 520px) {
+  .fact-text { font-size: 1.05rem }
+  .site-header .title { font-size: 1.5rem }
+}
